@@ -1,0 +1,14 @@
+#Secrets- Never push to GitHub
+.env
+settings.json
+
+#Python generated files
+__pycache__/
+*.pyc 
+venv/
+
+#Mac system files
+.DS_Store
+
+#VS Code settings
+.vscode/
