@@ -13,3 +13,44 @@
 
 ###Dificult parts
 -Understanding were each file goes in the project structure
+
+##Day 2 - 2026/04/23
+-Created, Users, Products and Orders tables (01_create_table.sql)
+-Established relationships using Foreign Keys to ensure data integrity
+-Populated tables with initial data test (02_insert_data.sql)
+-Created the OrderItems bridge table to handle many-to-many relationships (03_create_order_items.sql)
+-Mastered INNER JOIN connecting 4 different tables in a single query
+-Debugged syntax error related to SQL aliases (oi, u , p), and pluralization
+-Created Database View (v_OrderSummaries) to abstract complex JOIN logic
+
+###What I learned
+-Foreign Keys enforce data integrity between related tables
+-Bridge tables solve many-to-many relantionships between entities
+-VIEWs decouple complex logic from the application layer
+-Aliases make qu¡eries readable but need to be consistent throughout
+
+###Difficult parts
+-Understanding when to use a bridge table vs direct relationships
+-Debugging alias errors when multiple table share similar column names
+
+##Day 3 - 2026/04/24
+-Implemented the **Context Manager** pattern (`__enter__` / `__exit__`) in Python
+-Refactored `main.py` to use the `with` statement for automatic resource cleanup
+
+###What I learned
+-Using `with` ensures database connections close automatically, preventing memory leaks.
+-How `__enter__` and `__exit__` work under the hood to manage object lifecycles
+
+###Day 4 - 2026/04/25
+-Installed and integrated the Faker library for synthetic data generation
+-Created `seed_data.py` to automate the population of the database
+-Implemented `Parameterized Queries`using `?` to prevent SQL injection
+-Successfully generated 10 realistic users records into SQL Server
+
+###What I learned
+-The concept of `Data Mocking` and his importance of using realistic synthetic data for testing scalability
+-How SQL UNIQUE constraints protects the database from duplicates automated entries
+-Why passing data though `params`is safer than string formatting in SQL
+
+##Diffcult parts
+-Understanding why "re-running"an script can lead to data accumulation or constraints violations
