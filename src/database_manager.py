@@ -94,8 +94,8 @@ class DatabaseManager:
         
     def __enter__(self):
          """Allows using the class with the 'with' statement."""
-        self.connect()
-        return self
+         self.connect()
+         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         """Automatically closes connection at the end of the block"""
