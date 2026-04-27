@@ -52,5 +52,23 @@
 -How SQL UNIQUE constraints protects the database from duplicates automated entries
 -Why passing data though `params`is safer than string formatting in SQL
 
-##Diffcult parts
+###Diffcult parts
 -Understanding why "re-running"an script can lead to data accumulation or constraints violations
+
+###Day 5 - 2026/04/26
+-Created `reset_db.py` to handle data to cleanup
+
+###What I learned
+-Undertood why child records (OrderItems) must be deleted before parent record (Users) to avoid Foreign Key violations
+
+###Day 6 - 2026/04/27
+-Developed `generate_sales.py` to automate the transaction workflow
+-Used `@@IDENTITY` to capture the auto-generated primary key from SQL Server
+
+###What I learned
+-Why is mandatory to fetch existig IDs before inserting child records to mantain Referential Integrity
+-**Transactional Logic:** The business process of splitting a single purchase into two tables (Order summary vs. Item details)
+-How to use Python's `random` library to create diverse testing scenarios
+
+###Difficult parts
+-Ensuring the loops correctly mapped products to the specific `order_id` generated in the previous step
