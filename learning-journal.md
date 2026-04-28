@@ -72,3 +72,16 @@
 
 ###Difficult parts
 -Ensuring the loops correctly mapped products to the specific `order_id` generated in the previous step
+
+###Day 7 - 2026/04/28
+-Created a SQL View `v_SalesPerformance` to aggregate business data
+-Developed `check_performance.py` to extract and format data for end-users
+-Implemented `LEFT JOIN` logic in views to include users with zero sales
+
+###What I learned
+-Why using a SQL VIEW is better than hardcoding complex JOINs in Python
+-Using Python's f-strings (`:<25`) to create clean, readable tables in the terminal
+
+###Difficult parts
+-Understanding why `LEFT JOIN` is necessary: if I use `INNER JOIN`, users who haven't bought anything desappear from the report
+-Formatting floating-point numbers in python to show exactly two decimals for currency
