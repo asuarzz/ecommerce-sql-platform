@@ -85,3 +85,11 @@
 ###Difficult parts
 -Understanding why `LEFT JOIN` is necessary: if I use `INNER JOIN`, users who haven't bought anything desappear from the report
 -Formatting floating-point numbers in python to show exactly two decimals for currency
+
+###Day 8 - 2026/04/28
+-Started developing `data_integrity_check.py` to monitor relational health.
+-Identified a `4104` SQL error (Multi-part identifier could not be bound) when using aliases in complex subqueries.
+
+###Technical Analysis
+-The error occurs because the scope of the table alias `o` in the `Orders` table was not being correctly passed to the `EXISTS` subquery.
+-SQL Server has specific scoping rules for aliases in subqueries; sometimes `NOT IN` is a more robust alternative to `NOT EXISTS` for simple integrity checks.
